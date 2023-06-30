@@ -69,7 +69,7 @@ cd
 wget https://github.com/vagner3101/ssht/blob/main/bdgestorssh.sql > /dev/null 2>&1
 sleep 1
 if [[ -e "$HOME/BD-Painel-v23.sql" ]]; then
-    mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < BD-Painel-v23.sql
+    mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < bdgestorssh.sql.sql
     rm /root/BD-Painel-v23.sql
 else
     clear
