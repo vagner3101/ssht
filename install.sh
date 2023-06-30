@@ -57,8 +57,8 @@ echo ""
 
 cd /var/www/html
 wget https://github.com/vagner3101/ssht/blob/main/gestorssh%20(5)%20(1).zip > /dev/null 2>&1
-unzip PAINEL-V.25.zip > /dev/null 2>&1
-rm -rf PAINEL-V.25.zip index.html > /dev/null 2>&1
+unzip gestorssh%20(5)%20(1).zip > /dev/null 2>&1
+rm -rf gestorssh%20(5)%20(1).zip index.html > /dev/null 2>&1
 service apache2 restart > /dev/null 2>&1
 sleep 1
 if [[ -e "/var/www/html/pages/system/pass.php" ]]; then
@@ -68,9 +68,9 @@ sleep 1
 cd
 wget https://github.com/vagner3101/ssht/blob/main/bdgestorssh.sql > /dev/null 2>&1
 sleep 1
-if [[ -e "$HOME/BD-Painel-v23.sql" ]]; then
+if [[ -e "$HOME/bdgestorssh.sql.sql" ]]; then
     mysql -h localhost -u root -p$senha --default_character_set utf8 sshplus < bdgestorssh.sql.sql
-    rm /root/BD-Painel-v23.sql
+    rm /root/bdgestorssh.sql.sql
 else
     clear
     echo -e "\033[1;31m ERRO AO IMPORTAR BANCO DE DADOS\033[0m"
